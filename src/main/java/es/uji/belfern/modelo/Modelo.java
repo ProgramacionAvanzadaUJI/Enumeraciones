@@ -13,27 +13,27 @@ public class Modelo {
 
     public void retirarEfectivo(final double cantidad) {
         saldo -= cantidad;
-        operaciones.add(Menu.RETIRAR_EFECTIVO.getTitle() + " " +cantidad);
+        operaciones.add("Se han retirado " + +cantidad + " euros.");
     }
 
     public void realizarIngreso(final double cantidad) {
         saldo += cantidad;
-        operaciones.add(Menu.REALIZAR_INGRESO.getTitle() + " " + cantidad);
+        operaciones.add("Se han ingresado " + cantidad + " euros.");
     }
 
     public double consultarSaldo() {
-        operaciones.add(Menu.CONSULTAR_SALDO.getTitle());
+        operaciones.add("Se ha consultado el saldo de la cuenta.");
         return saldo;
     }
 
     public void recargarTarjeta(final double cantidad) {
         saldo -= cantidad;
-        operaciones.add(Menu.RECARGAR_TARJETA.getTitle() + " " + cantidad);
+        operaciones.add("Se ha recargado una tarjeta con " + cantidad + " euros.");
     }
 
     public void realizarTransferencia(final double cantidad) {
         saldo -= cantidad;
-        operaciones.add(Menu.REALIZAR_TRANSFERENCIA.getTitle() + " " + cantidad);
+        operaciones.add("Se ha realizado una transferencia de " + cantidad + " euros.");
     }
 
     public String operaciones() {
