@@ -8,7 +8,7 @@ public enum Menu {
     REALIZAR_TRANSFERENCIA("Realizar una transferencia."),
     CONSULTAR_OPERACIONES("Consultar operaciones."),
     SALIR("Salir de la aplicación.");
-
+    
     private String title;
 
     Menu(String title) {
