@@ -1,15 +1,11 @@
 package es.uji.belfern.modelo;
 
-import es.uji.belfern.menu.Menu;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Modelo {
     private double saldo = 100.00;
-    private List<String> operaciones = new ArrayList<>();
-    private Scanner teclado = new Scanner(System.in);
+    private final List<String> operaciones = new ArrayList<>();
 
     public void retirarEfectivo(final double cantidad) {
         saldo -= cantidad;
