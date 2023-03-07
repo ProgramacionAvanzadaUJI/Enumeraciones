@@ -18,12 +18,22 @@ public class Aplicacion {
         teclado.useLocale(Locale.US);
         Menu option;
         do {
-            System.out.println(Menu.getMenu());
-            System.out.print("Introduce una opción: ");
-            int intOption = teclado.nextInt();
-            option = Menu.getOpcion(intOption);
+            prompt();
+            option = getOption();
             filtraOpcion(option);
         } while (option != Menu.SALIR);
+    }
+
+    private Menu getOption() {
+        Menu option;
+        int intOption = teclado.nextInt();
+        option = Menu.getOpcion(intOption);
+        return option;
+    }
+
+    private void prompt() {
+        System.out.println(Menu.getMenu());
+        System.out.print("Introduce una opción: ");
     }
 
     private void filtraOpcion(final Menu opcion) {
